@@ -1,0 +1,149 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+.about {
+  background: linear-gradient(135deg, #0d1117, #1a1f2e);
+  color: white;
+  padding: 5rem 10%;
+  text-align: center;
+}
+
+.about-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.about-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #4F46E5, #6D28D9);
+  margin: 0.5rem auto;
+}
+
+.about-intro {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.15rem;
+  color: #d1d5db;
+  max-width: 800px;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.7;
+}
+
+.about-intro span {
+  color: #9ca3ff;
+  font-weight: 600;
+}
+
+/* Highlights */
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.highlight-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: left;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.highlight-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-4px);
+}
+
+.highlight-icon {
+  font-size: 1.6rem;
+  color: #6D28D9;
+  margin-bottom: 0.5rem;
+}
+
+/* Subheadings */
+.subheading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin: 2rem 0 1.5rem;
+}
+
+/* Experience */
+.about-experience {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.exp-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.2rem;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+/* Education */
+.about-education {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.edu-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.edu-icon {
+  font-size: 1.4rem;
+  color: #4F46E5;
+}
+
+/* Button */
+.about-btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background: linear-gradient(90deg, #4F46E5, #6D28D9);
+  color: white;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.about-btn:hover {
+  background: linear-gradient(90deg, #6D28D9, #4F46E5);
+  transform: scale(1.05);
+  
+}
+
+/* contact link */
+.contact-more-btn {
+  margin-left: 1rem;
+  background: linear-gradient(90deg, #2575fc, #6a11cb);
+}
+
+.contact-more-btn:hover {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+}
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap'); */
+
+.highlight-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+}

@@ -1,0 +1,140 @@
+
+
+
+.contact-section {
+  padding: 4rem 8%;
+  background: linear-gradient(135deg, #0d1117, #1a1f2e);
+  color: white;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2.7rem;
+  margin-bottom: 2.2rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.contact-subtitle {
+  color: #d1d5db;
+  margin-bottom: 2rem; /* Reduced margin */
+  font-size: 1.1rem;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 1rem; /* Reduced margin */
+  width: 100%; /* Ensure it takes full width */
+}
+
+.contact-form {
+  flex: 1; /* Allow the form to take available space */
+  max-width: 600px; /* Set a max width for the form */
+  margin-right: 2rem; /* Space between form and stats */
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+  animation: fadeSlideUp 900ms cubic-bezier(.2, .7, .2, 1) both;
+}
+
+.contact-subtitle-form {
+  font-size: 1.7rem; /* Subtitle for the form */
+  margin-bottom: 1rem; /* Space below the subtitle */
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(30, 41, 59, 0.7);
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem;
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: background 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: rgba(79, 70, 229, 0.18);
+}
+
+.contact-form button {
+  background: linear-gradient(90deg, #4F46E5 60%, #6366F1 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.12);
+}
+
+.contact-form button:hover {
+  background: linear-gradient(90deg, #6366F1 60%, #4F46E5 100%);
+  transform: scale(1.04);
+}
+
+.contact-stats {
+  flex: 1; /* Allow the stats to take available space */
+  max-width: 600px; /* Set a max width for the stats */
+  text-align: left; /* Align text to the left */
+}
+
+.stats-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.stats-bar {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.bar {
+  background: linear-gradient(90deg, #4F46E5, #6366F1);
+  border-radius: 8px;
+  height: 100%;
+  color: white;
+  padding: 0.5rem;
+  transition: width 0.3s ease;
+}
+
+/* Mobile tweaks */
+@media (max-width: 560px) {
+  .contact-form { padding: 1.2rem; }
+  .contact-title { font-size: 1.6rem; }
+  .contact-subtitle { font-size: 1rem; }
+  .contact-content {
+    flex-direction: column; /* Stack form and stats on mobile */
+    align-items: center;
+  }
+  .contact-stats {
+    margin-left: 0; /* Remove left margin on mobile */
+    margin-top: 2rem; /* Add some space above stats */
+  }
+}
+
+
+.loading-message {
+  color: #d1d5db; /* Light gray color */
+  margin-top: 1rem; /* Space above the loading message */
+}
+
+.success-message {
+  color: #4CAF50; /* Green color for success */
+  margin-top: 1rem; /* Space above the success message */
+}

@@ -1,0 +1,188 @@
+.case-section {
+  padding: 4rem 8%;
+  background: linear-gradient(135deg, #0d1117, #1a1f2e);
+  color: white;
+}
+
+/* Title + Intros */
+.case-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin-bottom: 0.6rem;
+  text-align: center;
+  width: 100%;
+  letter-spacing: 0.2px;
+}
+
+.case-subtitle,
+.case-intro-extra {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #d1d5db;
+  max-width: 900px;
+  margin: 0 auto 1.8rem auto;
+  text-align: center;
+}
+
+.case-intro-extra {
+  color: #a5b4fc;
+  font-style: italic;
+}
+
+/* List & Items */
+.case-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.case-item {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  will-change: transform, opacity;
+}
+
+.case-item.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Image */
+.case-image img {
+  width: 420px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  display: block;
+}
+
+.case-image:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 12px 32px rgba(99,102,241,0.35);
+}
+
+/* Text */
+.case-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.case-info h3,
+.case-h3 {
+  font-size: 1.9rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+
+.case-client {
+  font-size: 0.98rem;
+  color: #a5b4fc;
+  margin-bottom: 1rem;
+}
+
+.case-abstract {
+  color: #d1d5db;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.65;
+}
+
+/* Link */
+.case-link {
+  font-weight: 700;
+  color: #6366f1;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.25s ease;
+}
+
+.case-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #4F46E5, #6366F1);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+  border-radius: 2px;
+}
+
+.case-link:hover {
+  color: #818cf8;
+}
+
+.case-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .case-image img {
+    width: 360px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-item {
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+  .case-image img {
+    width: 100%;
+    height: auto;
+  }
+  .case-info h3,
+  .case-h3 {
+    font-size: 1.6rem;
+  }
+}
+
+
+/* Glow Overlay */
+.case-image {
+  position: relative;
+  overflow: hidden;
+}
+.case-image .image-overlay {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to bottom right, rgba(99,102,241,0.3), rgba(0,0,0,0.2));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 12px;
+  pointer-events: none;
+}
+.case-image:hover .image-overlay {
+  opacity: 1;
+}
+
+/* Link Hover Arrow Effect */
+.case-link {
+  position: relative;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+.case-link::after {
+  content: "→";
+  position: absolute;
+  right: -20px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.case-link:hover {
+  padding-left: 4px;
+}
+.case-link:hover::after {
+  right: -14px;
+  opacity: 1;
+}
