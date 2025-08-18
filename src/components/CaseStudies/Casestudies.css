@@ -41,6 +41,7 @@
   display: flex;
   gap: 2rem;
   align-items: center;
+  flex-wrap: wrap; /* ✅ allows wrapping on smaller screens */
   will-change: transform, opacity;
 }
 
@@ -49,6 +50,9 @@
 }
 
 /* Image */
+.case-image {
+  flex-shrink: 0;
+}
 .case-image img {
   width: 420px;
   height: 260px;
@@ -57,6 +61,8 @@
   box-shadow: 0 8px 24px rgba(0,0,0,0.35);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
   display: block;
+  max-width: 100%; /* ✅ prevent overflow */
+  height: auto;
 }
 
 .case-image:hover img {
@@ -67,7 +73,7 @@
 /* Text */
 .case-info {
   flex: 1;
-  min-width: 0;
+  min-width: 250px;
 }
 
 .case-info h3,
@@ -123,29 +129,63 @@
   transform: scaleX(1);
 }
 
-/* Responsive */
+/* Responsive Tweaks */
+@media (max-width: 1200px) {
+  .case-title {
+    font-size: 2.4rem;
+  }
+  .case-subtitle,
+  .case-intro-extra {
+    font-size: 1.05rem;
+  }
+}
+
 @media (max-width: 992px) {
   .case-image img {
     width: 360px;
     height: 220px;
   }
+  .case-info h3 {
+    font-size: 1.7rem;
+  }
 }
 
 @media (max-width: 768px) {
   .case-item {
-    flex-direction: column;
-    gap: 1.4rem;
+    flex-direction: column !important; /* ✅ stack image + text */
+    text-align: center;
   }
   .case-image img {
     width: 100%;
     height: auto;
   }
-  .case-info h3,
-  .case-h3 {
-    font-size: 1.6rem;
+  .case-info h3 {
+    font-size: 1.5rem;
+  }
+  .case-client {
+    font-size: 0.9rem;
   }
 }
 
+@media (max-width: 480px) {
+  .case-section {
+    padding: 2.5rem 5%;
+  }
+  .case-title {
+    font-size: 2rem;
+  }
+  .case-subtitle,
+  .case-intro-extra {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .case-info h3 {
+    font-size: 1.3rem;
+  }
+  .case-abstract {
+    font-size: 0.9rem;
+  }
+}
 
 /* Glow Overlay */
 .case-image {

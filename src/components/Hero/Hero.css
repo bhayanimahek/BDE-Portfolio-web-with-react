@@ -1,17 +1,15 @@
-
- .hero {
+.hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 11rem 8%; /* reduce vertical padding  8%*/ 
-  gap: 2rem; /* adds space between text and image */
-  flex-wrap: wrap; /* makes it responsive */
+  padding: 11rem 8%;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-
- .hero-content {
-  flex: 1 1 450px; /* makes it flexible for small screens */
-  max-width: 600px; /* prevents text stretching too much */
+.hero-content {
+  flex: 1 1 450px;
+  max-width: 600px;
 }
 
 .hero-title {
@@ -53,6 +51,9 @@
 
 .hero-image {
   position: relative;
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
 }
 .hero-image::before {
   content: "";
@@ -69,16 +70,16 @@
   position: relative;
   z-index: 1;
   max-width: 400px;
+  width: 100%;
   border-radius: 20px;
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 /* Animation */
- @keyframes fadeInUp {
+@keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
-} 
-
+}
 
 .highlight-name {
   background: linear-gradient(90deg, #ff8a00, #e52e71);
@@ -89,19 +90,14 @@
   text-shadow: 2px 2px 8px rgba(229, 46, 113, 0.3);
 }
 
-
 .blinking-underline {
-  border-bottom: 1px solid #ff8a00; /* thin underline */
-  animation: blinkUnderline 2s step-start infinite; /* blink every 1 sec */
+  border-bottom: 1px solid #ff8a00;
+  animation: blinkUnderline 2s step-start infinite;
 }
 
 @keyframes blinkUnderline {
-  0%, 49% {
-    border-bottom-color: #ff8a00;
-  }
-  50%, 100% {
-    border-bottom-color: transparent;
-  }
+  0%, 49% { border-bottom-color: #ff8a00; }
+  50%, 100% { border-bottom-color: transparent; }
 }
 
 .hero-typewriter {
@@ -118,14 +114,14 @@
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid #ff8a00;
-  width: 0ch; /* Start hidden */
+  width: 0ch;
   animation: typing 4s steps(50, end) infinite,
              blinkCaret 0.75s step-end infinite;
 }
 
 @keyframes typing {
   0% { width: 0ch }
-  40% { width: 50ch } /* match to total text length */
+  40% { width: 50ch }
   60% { width: 50ch }
   100% { width: 0ch }
 }
@@ -134,3 +130,59 @@
   0%, 100% { border-color: transparent }
   50% { border-color: #ff8a00 }
 }
+
+/* ✅ Responsive Fixes */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 8rem 6%;
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-content {
+    max-width: 100%;
+  }
+  .hero-image {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 6rem 5%;
+  }
+  .hero-title {
+    font-size: 1.6rem;
+  }
+  .highlight-name {
+    font-size: 2rem;
+  }
+  .hero-description {
+    font-size: 1rem;
+  }
+  .hero-btn {
+    padding: 0.7rem 1.6rem;
+    font-size: 0.95rem;
+  }
+  .hero-image img {
+    max-width: 80%;
+  }
+}
+@media (max-width: 400px) {
+  .hero {
+    padding: 5rem 4%;
+  }
+  .hero-title {
+    font-size: 1.4rem;
+  }
+  .highlight-name {
+    font-size: 1.8rem;
+  }
+  .hero-description {
+    font-size: 0.9rem;
+  }
+  .hero-btn {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.85rem;
+  }
+}
+  

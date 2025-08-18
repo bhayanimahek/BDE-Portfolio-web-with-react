@@ -1,3 +1,8 @@
+
+
+
+
+
 import React from "react";
 import "./Hero.css";
 import profileImg from "../../assets/profile.png";
@@ -25,10 +30,10 @@ export default function Hero() {
             Business Development Executive | Growth Strategist{" "}
           </p>
 
-          {/* Your original tagline with minimal highlights */}
+          {/* Tagline */}
           <p className="hero-tagline hero-title">
             I help Companies in{" "}
-            <span className="blinking-underline">
+            <span className="blinking-underline ">
               Building Strong Business Connections
             </span>
             , <br />

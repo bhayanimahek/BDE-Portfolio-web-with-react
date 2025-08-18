@@ -1,6 +1,4 @@
-/* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap');
-
+/* Base Styles (same as yours, with small refinements) */
 .about {
   background: linear-gradient(135deg, #0d1117, #1a1f2e);
   color: white;
@@ -38,7 +36,12 @@
   font-weight: 600;
 }
 
-/* Highlights */
+.highlight-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+}
+
+/* Highlights Grid */
 .about-highlights {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -111,7 +114,7 @@
   color: #4F46E5;
 }
 
-/* Button */
+/* Buttons */
 .about-btn {
   display: inline-block;
   padding: 0.8rem 1.8rem;
@@ -122,15 +125,14 @@
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   transition: transform 0.3s ease, background 0.3s ease;
+  margin-bottom: 1rem;
 }
 
 .about-btn:hover {
   background: linear-gradient(90deg, #6D28D9, #4F46E5);
   transform: scale(1.05);
-  
 }
 
-/* contact link */
 .contact-more-btn {
   margin-left: 1rem;
   background: linear-gradient(90deg, #2575fc, #6a11cb);
@@ -140,10 +142,93 @@
   background: linear-gradient(90deg, #6a11cb, #2575fc);
 }
 
+/* ============================= */
+/* 📱 Responsive Design */
+/* ============================= */
 
-/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap'); */
+@media (max-width: 1200px) {
+  .about-title {
+    font-size: 2.4rem;
+  }
+  .about-intro {
+    font-size: 1.05rem;
+  }
+  .highlight-name {
+    font-size: 1.7rem;
+  }
+}
 
-.highlight-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+@media (max-width: 992px) {
+  .about {
+    padding: 4rem 8%;
+  }
+  .about-title {
+    font-size: 2.2rem;
+  }
+  .subheading {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 3rem 6%;
+  }
+  .about-title {
+    font-size: 2rem;
+  }
+  .about-intro {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .highlight-name {
+    font-size: 1.5rem;
+  }
+
+  .about-experience {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .exp-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .about-btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+  }
+
+  .contact-more-btn {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 2.5rem 5%;
+  }
+  .about-title {
+    font-size: 1.8rem;
+  }
+  .about-intro {
+    font-size: 0.95rem;
+  }
+  .highlight-name {
+    font-size: 1.3rem;
+  }
+  .subheading {
+    font-size: 1.4rem;
+  }
+  .exp-card {
+    padding: 1rem;
+  }
+  .edu-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
 }
