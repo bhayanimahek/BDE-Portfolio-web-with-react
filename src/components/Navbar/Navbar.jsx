@@ -1,3 +1,6 @@
+
+
+// // export default Navbar;
 // import React, { useState } from "react";
 // import { FaUserTie, FaBars, FaTimes } from "react-icons/fa";
 // import { motion } from "framer-motion";
@@ -10,7 +13,7 @@
 //     const element = document.getElementById(id);
 //     if (element) {
 //       element.scrollIntoView({ behavior: "smooth" });
-//       setMenuOpen(false); // Close menu after click on mobile
+//       setMenuOpen(false); // Close menu on mobile after click
 //     }
 //   };
 
@@ -56,6 +59,8 @@
 //           { id: "portfolio", label: "Portfolio" },
 //           { id: "skills", label: "Skills" },
 //           { id: "testimonials", label: "Testimonials" },
+//           { id: "case-studies", label: "Case Studies" },
+//           { id: "blogs", label: "Blogs" },
 //         ].map((link) => (
 //           <motion.li
 //             key={link.id}
@@ -89,6 +94,8 @@
 // };
 
 // export default Navbar;
+
+
 import React, { useState } from "react";
 import { FaUserTie, FaBars, FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -166,6 +173,16 @@ const Navbar = () => {
             </a>
           </motion.li>
         ))}
+
+        {/* Mobile Contact Button */}
+        <motion.button
+          className="contact-btn mobile-contact"
+          onClick={() => scrollToSection("contact")}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Contact
+        </motion.button>
       </motion.ul>
 
       {/* Desktop Contact Button */}

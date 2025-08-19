@@ -186,3 +186,17 @@
   }
 }
   
+/* ✅ Disable animations on small screens */
+@media (max-width: 768px) {
+  .hero-typewriter {
+    animation: none !important;
+    border-right: none !important;
+    width: auto !important;
+    white-space: normal !important;
+  }
+
+  .blinking-underline {
+    animation: none !important;
+    border-bottom: 1px solid #ff8a00; /* keep static underline */
+  }
+}
